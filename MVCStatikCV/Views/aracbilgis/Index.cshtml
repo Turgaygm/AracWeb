@@ -1,0 +1,71 @@
+﻿@model IEnumerable<MVCStatikCV.Models.aracbilgi>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section style="background-color:#212529">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading bg-light">CARS</h2>
+                <h3 class="section-subheading bg-light">
+                    Lorem ipsum dolor sit amet consectetur. Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                    it to make a type specimen book
+                </h3>
+            </div>
+        </div>
+
+
+        @if (User.IsInRole("A"))
+        {
+            <p>
+                @Html.ActionLink("Yeni Kayıt", "Create")
+
+            </p>
+        }
+
+
+
+        <div class="container">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+
+                    <div class="card" style="width: 18rem; margin:3%">
+                        <img style="width:285px; height:200px" src="@Html.DisplayFor(modelItem => item.foto1)" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Marka) @Html.DisplayFor(modelItem => item.Seri)</h5>
+
+                            <p class="card-text">@Html.DisplayFor(modelItem => item.Acıklama)</p>
+
+                        </div>
+                        <ul class="list-group list-group-flush">
+
+                            <li class="list-group-item">@Html.DisplayFor(modelItem => item.Yil)</li>
+                            <li class="list-group-item">@Html.DisplayFor(modelItem => item.KasaTipi)</li>
+                            <li class="list-group-item">@Html.DisplayFor(modelItem => item.KM) KM</li>
+                        </ul>
+                        <div class="card-body">
+                            @Html.ActionLink("Detaylar", "Details", new { id = item.Id })
+                            <br />
+
+                            @if (User.IsInRole("A"))
+                            {
+                                @Html.ActionLink("Güncelle", "Edit", new { id = item.Id })
+                                <br />
+                                @Html.ActionLink("Sil", "Delete", new { id = item.Id })
+                            }
+
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </div>
+    </div>
+</section>
+

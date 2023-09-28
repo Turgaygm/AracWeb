@@ -1,0 +1,144 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Web Sitesi</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="~/css/agency.min.css" rel="stylesheet" />
+    <link href="~/css/agency.css" rel="stylesheet" />
+</head>
+@RenderBody()
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+
+            <a class="nav-link js-scroll-trigger" href="/Anasayfa/Index">XX Otomotiv</a>
+
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/Anasayfa/Index/#services">Hizmetlerimiz</a>
+                    </li>
+                    @*<li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/Anasayfa/Index/#portfolio">Portfolio</a>
+                    </li>*@
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/Anasayfa/Index/#about">Hakkımızda</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/Anasayfa/Index/#team">Ekibimiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/aracbilgis/Index">Araçlarımız</a>
+                    </li>
+
+
+                    @if (User.IsInRole("A"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/Account/LogOut">Çıkış</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Portfolio Modals -->
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d773692.640990581!2d27.68087287006709!3d40.75681447000617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b568aa4776cfa7%3A0x5eb5ffc8155d820f!2sMarmara%20Denizi!5e0!3m2!1str!2str!4v1693518411232!5m2!1str!2str" width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-md-8">
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul style="margin-top:8px" class="list-inline ">
+                        <li class="list-inline">
+                            <p>xxxx@hotmail.com</p>
+                        </li>
+                    </ul>
+                    <ul class="list-inline ">
+                        <li class="list-inline">
+                            <p>0123 456 7890</p>
+                        </li>
+                    </ul>
+                    <ul class="list-inline ">
+                        <li class="list-inline">
+                            <span class="copyright">Copyright &copy; Turgay Gümüş 2023</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="~/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="~/js/contact_me.js"></script>
+    <script src="~/js/jqBootstrapValidation.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="~/js/agency.min.js"></script>
+
+</body>
+
+</html>

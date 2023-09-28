@@ -1,0 +1,151 @@
+﻿@model MVCStatikCV.Models.aracbilgi
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        .my-label {
+            color: #fed136
+        }
+
+        dt {
+            text-align:center; color: #fed136
+        }
+
+        dd {
+            color: aliceblue
+        }
+    </style>
+</head>
+<section style="background-color:#212529" id="portfolio">
+    <div class="col-lg-12 text-center" style="margin-bottom:5%; margin-top:5%; padding-left:10%;padding-right:10%">
+        <h2 class="section-heading bg-light">Bir kayıt silmek üzeresiniz !</h2>
+        <br />
+        <br />
+        <h4 class="my-label" style="text-align:center">Silmek istediğiniz araç bilgileri</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Marka)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Marka)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Seri)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Seri)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Model)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Model)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Yil)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Yil)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Yakit)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Yakit)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Vites)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Vites)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.KasaTipi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.KasaTipi)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MotorGucu)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MotorGucu)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MotorHacmi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MotorHacmi)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Cekis)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Cekis)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Renk)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Renk)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Plaka)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Plaka)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Takas)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Takas)
+            </dd>
+
+        </dl>
+
+    </div>
+    <h3 class="section-heading bg-light " style="text-align:center">Bu kayıdı silmek istediğinize emin misiniz?</h3><br />
+    <div style="display:flex;justify-content:center;align-items:center;">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Kaydı Sİl" class="btn btn-danger" /> |
+                @Html.ActionLink("Listeye Geri Dön", "Index")
+            </div>
+        }
+    </div>
+</section>
